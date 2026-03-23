@@ -1,0 +1,22 @@
+{
+  "name": "Nails by Anesita",
+  "short_name": "Nails",
+  "description": "Uñas y belleza - Tu espacio de cuidado personal",
+  "start_url": "/nails-by-anesita/",
+  "scope": "/nails-by-anesita/",
+  "display": "standalone",
+  "background_color": "#ec4899",
+  "theme_color": "#ec4899",
+  "icons": [
+    {
+      "src": "/nails-by-anesita/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/nails-by-anesita/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
