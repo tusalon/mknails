@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Nails by Anesita
+// sw.js - Service Worker para Mknails 
 
-const CACHE_NAME = 'nails-by-anesita-v1';
+const CACHE_NAME = 'mknails--v1';
 const urlsToCache = [
-  '/nails-by-anesita/',
-  '/nails-by-anesita/index.html',
-  '/nails-by-anesita/admin.html',
-  '/nails-by-anesita/admin-login.html',
-  '/nails-by-anesita/setup-wizard.html',
-  '/nails-by-anesita/editar-negocio.html',
-  '/nails-by-anesita/manifest.json',
-  '/nails-by-anesita/icons/icon-72x72.png',
-  '/nails-by-anesita/icons/icon-96x96.png',
-  '/nails-by-anesita/icons/icon-128x128.png',
-  '/nails-by-anesita/icons/icon-144x144.png',
-  '/nails-by-anesita/icons/icon-152x152.png',
-  '/nails-by-anesita/icons/icon-192x192.png',
-  '/nails-by-anesita/icons/icon-384x384.png',
-  '/nails-by-anesita/icons/icon-512x512.png'
+  '/mknails-/',
+  '/mknails-/index.html',
+  '/mknails-/admin.html',
+  '/mknails-/admin-login.html',
+  '/mknails-/setup-wizard.html',
+  '/mknails-/editar-negocio.html',
+  '/mknails-/manifest.json',
+  '/mknails-/icons/icon-72x72.png',
+  '/mknails-/icons/icon-96x96.png',
+  '/mknails-/icons/icon-128x128.png',
+  '/mknails-/icons/icon-144x144.png',
+  '/mknails-/icons/icon-152x152.png',
+  '/mknails-/icons/icon-192x192.png',
+  '/mknails-/icons/icon-384x384.png',
+  '/mknails-/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/nails-by-anesita/icons/icon-192x192.png');
+            return caches.match('/mknails-/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Nails by Anesita');
+console.log('✅ Service Worker configurado para Mknails ');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
